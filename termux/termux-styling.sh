@@ -6,7 +6,7 @@ if [[ $1 == güncelle ]];then
 	exit
 fi
 cd files
-#bash güncelleme.sh
+bash güncelleme.sh
 bash banner.sh
 cd ..
 printf "
@@ -33,5 +33,56 @@ elif [[ $secim == 2 ]];then
 	exit
 elif [[ $secim == 3 ]];then
 	bash banners.sh
+elif [[ $secim == 4 ]];then
+	eski=$(sed -n 3p colors.properties)
+	yeni="foreground=#ffffff"
+	sed -ie "s/$eski/$yeni/g" colors.properties
+	cp fonts/UbuntuMono/'Ubuntu Mono derivative Powerline.ttf' font.ttf
+	kontrol=$(sed -n 2p $HOME/.zshrc |wc -m)
+	if [[ $kontrol == 9 ]];then
+		sed -ie "s/neofetch/#neofetch/g" $HOME/.zshrc
+		sed -ie "s/#cowsay/cowsay/g" $HOME/.zshrc
+		kontrol=$(sed -n 3p $HOME/.zshrc |awk '{printf $3}')
+		if [[ $kontrol != kurukafa ]];then
+			sed -ie "s/$kontrol/kurukafa/g" $HOME/.zshrc
+		fi
+	elif [[ $kontrol == 10 ]];then
+		kontrol=$(sed -n 3p $HOME/.zshrc |awk '{printf $3}')
+		if [[ $kontrol != kurukafa ]];then
+			sed -ie "s/$kontrol/kurukafa/g" $HOME/.zshrc
+		fi
+	fi
+	if [[ -a $HOME/.zshrce ]];then
+		rm $HOME/.zshrce
+	fi
+	echo
+	echo
+	echo
+	printf "\e[32m[✓]\e[0m İŞLEM TAMAMLANDI "
+	echo
+	echo
+	echo
+	sleep 1
+	zsh
+elif [[ $secim == x || $secim == X ]];then
+	echo
+	echo
+	echo
+	printf "\e[31m[!]\e[0m ÇIKIŞ YAPILDI "
+	echo
+	echo
+	echo
+	exit
+else
+	echo
+	echo
+	echo
+	printf "\e[31m[!]\e[0m HATALI SEÇİM"
+	echo
+	echo
+	echo
+	sleep 1
+	bash termux-styling.sh
+
 fi
 
