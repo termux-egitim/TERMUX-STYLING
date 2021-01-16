@@ -1,0 +1,31 @@
+#!/bin/bash
+##Author=UmuT_KaRa
+
+if [[ $1 == -a ]];then
+	echo
+	echo
+	printf "\e[33m"
+	pwd
+	printf "\e[0m"
+	echo
+	echo
+	ls -a
+	echo
+	echo
+	echo
+	echo
+else
+
+	echo
+	echo
+	printf "\e[33m"
+	pwd
+	printf "\e[0m"
+	echo
+	echo
+	ls
+	echo
+	echo
+	echo
+	echo
+fi

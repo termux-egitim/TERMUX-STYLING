@@ -1,0 +1,15 @@
+BEYAZ = #ffffff
+
+KIRMIZI = #d50000
+
+YEŞİL = #4caf50
+
+MAVİ = #4fc3f7
+
+CAM GÖBEĞİ = #00FFFF
+
+SARI = #FFD700
+
+TURUNCU = #FF8C00
+
+
