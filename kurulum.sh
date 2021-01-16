@@ -5,6 +5,12 @@ if [[ $1 == güncelle ]];then
 	bash güncelleme.sh güncelle
 	exit
 fi
+kontrol=$(which figlet |wc -l)
+if [[ $kontrol == 1 ]];then
+	cp termux/files/figlet-fonts/* $PREFIX/share/figlet
+	chmod 777 $PREFIX/share/figlet/*
+	rm -rf termux/files/figlet-fonts
+fi
 mv termux/files/scripts/* $PREFIX/bin
 rm -rf termux/files/scripts/
 mv termux/termux-styling $PREFIX/bin

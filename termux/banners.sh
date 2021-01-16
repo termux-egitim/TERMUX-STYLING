@@ -28,6 +28,7 @@ if [[ $banners == 0 ]];then
 		sed -ie "s/#neofetch/neofetch/g" $HOME/.zshrc
 		sed -ie "s/cowsay/#cowsay/g" $HOME/.zshrc
 	else
+		cd $konum
 		zsh
 	fi
 	if [[ -a $HOME/.zshrce ]];then
@@ -41,6 +42,7 @@ if [[ $banners == 0 ]];then
 	echo
 	echo
 	sleep 1
+	cd $konun
 	zsh
 elif [[ $banners == 1 ]];then
 	kontrol=$(sed -n 2p $HOME/.zshrc |wc -m)
@@ -57,6 +59,7 @@ elif [[ $banners == 1 ]];then
 			sed -ie "s/$kontrol/kurukafa/g" $HOME/.zshrc
 		fi
 	else
+		cd $konum
 		zsh
 	fi
 	if [[ -a $HOME/.zshrce ]];then
@@ -70,6 +73,7 @@ elif [[ $banners == 1 ]];then
 	echo
 	echo
 	sleep 1
+	cd $konum
 	zsh
 elif [[ $banners == 2 ]];then
 	kontrol=$(sed -n 2p $HOME/.zshrc |wc -m)
@@ -86,6 +90,7 @@ elif [[ $banners == 2 ]];then
 			sed -ie "s/$kontrol/eyes/g" $HOME/.zshrc
 		fi
 	else
+		cd $konum
 		zsh
 	fi
 	if [[ -a $HOME/.zshrce ]];then
@@ -99,6 +104,7 @@ elif [[ $banners == 2 ]];then
 	echo
 	echo
 	sleep 1
+	cd $konum
 	zsh
 else
 	echo

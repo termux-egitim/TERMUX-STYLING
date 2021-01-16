@@ -1,3 +1,4 @@
 #!/bin/bash
+export konum=$(pwd)
 cd $HOME/.termux
 bash termux-styling.sh
