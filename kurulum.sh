@@ -1,8 +1,13 @@
 #!/bin/bash
 clear
 if [[ $1 == güncelle ]];then
+	rm README.md
+	mv .git termux
 	cd termux/files
 	bash güncelleme.sh güncelle
+	cd ..
+	cp README.md ..
+	mv .git ..
 	exit
 fi
 kontrol=$(which figlet |wc -l)
