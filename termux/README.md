@@ -1,3 +1,3 @@
 termux-styling
 
-Güncelleme 24.01.2021
+Güncelleme 25.01.2021
