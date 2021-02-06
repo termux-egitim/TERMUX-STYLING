@@ -5,6 +5,24 @@ if [[ $1 == güncelle ]];then
 	bash güncelleme.sh güncelle
 	exit
 fi
+if [[ $1 == --toolkaldir ]];then
+	cd files
+	mv motd /data/data/com.termux/files/usr/etc/motd
+	sed -ie "s/zsh//g" /data/data/com.termux/files/usr/etc/bash.bashrc
+	rm /data/data/com.termux/files/usr/etc/bash.bashrce
+	rm $HOME/.zshrc
+	rm -rf .termux
+	rm $PREFIX/bin/termux-styling
+	termux-reload-settings
+	echo
+	echo
+	echo
+	printf "\e[32m[✓]\e[97m TOOL KALDIRILDI"
+	echo
+	echo
+	echo
+	exit
+fi
 cd files
 bash güncelleme.sh
 bash banner.sh
