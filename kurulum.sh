@@ -101,13 +101,13 @@ echo
 echo
 echo
 printf "\e[32m
-        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m
 
-	          KISAYOL OLUŞTURULDU
+	KISAYOL OLUŞTURULDU
 
-	             \e[33mtermux-styling \e[97m
-	\e[32m
-	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m"
+	   \e[33mtermux-styling \e[97m
+\e[32m
++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m"
 sleep 5
 echo
 echo
