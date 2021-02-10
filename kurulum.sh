@@ -100,11 +100,15 @@ echo
 echo
 echo
 echo
-printf "
-\e[1;4;97mKISAYOL OLUŞTURULDU\e[0m
+printf "\e[32m
+        +-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m
 
-\e[32m[✓] \e[31m>>\e[97m termux-styling"
-sleep 2
+	          KISAYOL OLUŞTURULDU
+
+	             \e[33mtermux-styling \e[97m
+	\e[32m
+	+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+\e[97m"
+sleep 5
 echo
 echo
 echo
