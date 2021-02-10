@@ -11,7 +11,7 @@ if [[ $1 == --toolkaldir ]];then
 	sed -ie "s/zsh//g" /data/data/com.termux/files/usr/etc/bash.bashrc
 	rm /data/data/com.termux/files/usr/etc/bash.bashrce
 	rm $HOME/.zshrc
-	rm -rf .termux
+	rm -rf $HOME/.termux
 	rm $PREFIX/bin/termux-styling
 	termux-reload-settings
 	echo
