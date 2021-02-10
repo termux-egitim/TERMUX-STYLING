@@ -81,6 +81,8 @@ elif [[ $secim == 4 ]];then
 	echo
 	echo
 	sleep 1
+	termux-reload-settings
+	cd $HOME
 	zsh
 elif [[ $secim == x || $secim == X ]];then
 	echo

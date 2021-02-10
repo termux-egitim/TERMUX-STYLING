@@ -1,4 +1,17 @@
 #!/bin/bash
-export konum=$(pwd)
-cd $HOME/.termux
-bash termux-styling.sh $1
+konum="$HOME/.termux"
+cd $konum
+if [[ -a termux-styling.sh ]];then
+	bash termux-styling.sh $1
+	exit
+fi
+if [[ -a kurulum.sh ]];then
+	rm kurulum.sh
+	rm README.md
+	mv termux/* $konum
+	rm -rf termux
+	rm $PREFIX/bin/termux-styling
+	mv termux-styling $PREFIX/bin/
+	bash termux-styling.sh $1
+	exit
+fi
